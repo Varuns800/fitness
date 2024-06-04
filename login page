@@ -51,6 +51,9 @@ img.avatar {
 
 .container {
   padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 span.psw {
@@ -60,7 +63,7 @@ span.psw {
 
 /* The Modal (background) */
 .modal {
-  display: none; /* Hidden by default */
+  /* display: none; Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
   left: 0;
@@ -78,7 +81,7 @@ span.psw {
   background-color: #fefefe;
   margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
   border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+  width: 50%; /* Could be more or less, depending on screen size */
 }
 
 /* The Close Button (x) */
@@ -95,7 +98,7 @@ span.psw {
 .close:focus {
   color: red;
   cursor: pointer;
-}
+} 
 
 /* Add Zoom Animation */
 .animate {
@@ -127,9 +130,9 @@ span.psw {
 </head>
 <body>
 
-<h2>Modal Login Form</h2>
+<!-- <h2>Modal Login Form</h2> -->
 
-<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+<!-- <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button> -->
 
 <div id="id01" class="modal">
   
@@ -139,21 +142,27 @@ span.psw {
       <img src="img_avatar2.png" alt="Avatar" class="avatar">
     </div>
 
-    <div class="container">
-      <label for="uname"><b>Username</b></label>
+    <div class="" style="padding: 30px;">
+      <label for="uname" style=""><b>Username</b></label>
       <input type="text" placeholder="Enter Username" name="uname" required>
 
       <label for="psw"><b>Password</b></label>
       <input type="password" placeholder="Enter Password" name="psw" required>
-        
-      <button type="submit">Login</button>
+
+      <div class="container">
+        <button type="submit" style="width: 50%; text-align: center;">Login</button>
+        <div>
+          
       <label>
         <input type="checkbox" checked="checked" name="remember"> Remember me
       </label>
-    </div>
+        </div>
+      </div>
+        
 
+    </div>
+    <br />
     <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
       <span class="psw">Forgot <a href="#">password?</a></span>
     </div>
   </form>
